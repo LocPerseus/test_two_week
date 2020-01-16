@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .container-grid {
+            margin: auto;
+        }
+        
+        .container-grid>div {
+            display: grid;
+            grid-gap: 1px 1px;
+            grid-template-columns: repeat(var(--col), 60px);
+        }
+        
+        .container-grid>div>div {
+            border: 1px solid black;
+            align-content: center;
+            text-align: center;
+            user-select: none;
+            padding: 6px;
+        }
+        
+        .header {
+            top: 0;
+            font-size: 30px;
+            font-weight: bold;
+            background: #5adb8c;
+            position: relative;
+        }
+        
+        button {
+            width: 173px;
+            height: 21px;
+        }
+        
+        .controls>button {
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .fixed-header .header {
+            position: fixed;
+        }
+        
+        .input {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        input {
+            height: 30px;
+            width: 60px;
+            text-align: center;
+            border-radius: 1px;
+        }
+    </style>
+    <div class="input">
+        <label for="n">Số dòng</label>
+        <input type="text" name="n" id="n" value="100">
+        <label for="n">Số cột</label>
+        <input type="text" name="m" id="m" value="20">
+        <button class="show"> Show</button>
+    </div>
+    <div class="container-grid">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
